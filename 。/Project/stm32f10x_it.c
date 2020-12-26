@@ -202,14 +202,14 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 {
 	if(CAN_GetITStatus(CAN1,CAN_IT_FMP0 )!=RESET)
 	{
-		CAN_ClearITPendingBit(CAN1,CAN_IT_FMP0);
-		CAN_Receive(CAN1,CAN_FIFO0 ,&CAN_Rece_Data);
-		if((CAN_Rece_Data.StdId==0x01)&&(CAN_Rece_Data.IDE==CAN_ID_STD))
-		{
-			
-		}
+//		CAN_ClearITPendingBit(CAN1,CAN_IT_FMP0);
+//		CAN_Receive(CAN1,CAN_FIFO0 ,&CAN_Rece_Data);
+//		if((CAN_Rece_Data.StdId==0x01)&&(CAN_Rece_Data.IDE==CAN_ID_STD))
+//		{
+//			
+//		}
 	}
-	//CAN_Receive (CAN1 ,CAN_FIFO0,&CAN_Rece_Data);//接受的数据位存储在这里
+	CAN_Receive (CAN1 ,CAN_FIFO0,&CAN_Rece_Data);//接受的数据位存储在这里
 }
 
 

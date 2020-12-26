@@ -8,7 +8,7 @@ int m;
 int main(void)
 {
 	Init();
-	LED1_ON;
+	LED2_ON;
 	printf("/r/n这是一个CAN通讯实验/r/n");
 	while(1)
 	{
